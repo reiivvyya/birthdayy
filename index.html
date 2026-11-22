@@ -1,189 +1,468 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday, Tante!</title>
+<title>Happy Birthday, Tante Elok!</title>
+
 <style>
-:root{--rose:#b85d7d;--rose2:#f3d8e2;--ink:#503744;--cream:#fff9f4;--gold:#d6a85f}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif}
-nav{position:sticky;top:0;z-index:5;background:#fffaf2eF;backdrop-filter:blur(10px);display:flex;justify-content:center;gap:22px;padding:14px 10px;border-bottom:1px solid #f0dfe4}
-nav a{color:#865568;text-decoration:none;font:12px Arial,sans-serif;letter-spacing:1px}
-nav a:hover{color:var(--rose)}
-.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:60px 20px;background:radial-gradient(circle at 15% 20%,#fff 0 5%,transparent 28%),radial-gradient(circle at 85% 75%,#f8e5d6 0 5%,transparent 25%),linear-gradient(140deg,#f8e1e9,#fff8ee)}
-.kicker{font:11px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#a56b7e}
-h1{font-size:clamp(45px,10vw,88px);line-height:1.02;color:var(--rose);margin:18px 0}
-.hero p{max-width:580px;margin:auto;font:15px/1.9 Arial,sans-serif;color:#765b67}
-button{border:0;border-radius:30px;padding:13px 23px;background:var(--rose);color:#fff;font:14px Arial,sans-serif;cursor:pointer;transition:.2s}
-button:hover{transform:translateY(-2px);filter:brightness(.96)}
-.hero button{margin:24px 5px 0}
-.outline{background:transparent;border:1px solid var(--rose);color:var(--rose)}
-section{padding:76px 18px;text-align:center}
-.section-kicker{font:10px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#b28a96}
-h2{font-size:clamp(30px,5vw,43px);color:var(--rose);margin:10px 0}
-.lead{font:14px/1.8 Arial,sans-serif;color:#927582;max-width:600px;margin:0 auto}
-.divider{color:#c68ba0;font-size:23px;letter-spacing:10px;margin:22px}
-.story{max-width:760px;margin:28px auto;background:#fff;padding:34px 28px;border-radius:20px;box-shadow:0 12px 35px #70485a12;font-size:18px;line-height:2}
-.gallery{max-width:1020px;margin:34px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.photo{background:#fff;padding:9px 9px 24px;border-radius:4px;box-shadow:0 9px 26px #70485a18;transform:rotate(var(--tilt))}
-.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#f3e6eb}
-.photo span{display:block;padding-top:12px;font:12px Arial,sans-serif;color:#997583}
-.wish-grid{max-width:900px;margin:32px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.wish{padding:25px 17px;background:#fff;border:1px solid #f1dfe5;border-radius:16px;line-height:1.7}
-.wish b{display:block;color:var(--rose);font-size:18px;margin-bottom:7px}
-.quiz-wrap{max-width:720px;margin:30px auto;background:#fff;padding:30px 25px;border-radius:22px;box-shadow:0 12px 35px #70485a12;text-align:left}
-.progress{height:7px;background:#f5e7ec;border-radius:20px;overflow:hidden;margin:15px 0 25px}
-.progress span{display:block;height:100%;width:0;background:var(--rose);transition:.25s}
-#question{font-size:22px;line-height:1.5;margin:10px 0 20px}
-.answers{display:grid;gap:10px}
-.answer{width:100%;text-align:left;background:#fff8fa;border:1px solid #efd5df;color:#654553;border-radius:12px;padding:15px 16px;font:15px Arial,sans-serif}
-.answer.selected{background:#f5dce5;border-color:#bd6e8a}
-.quiz-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:22px}
-#feedback{min-height:25px;color:#a45675;font:14px Arial,sans-serif}
-#result{display:none;text-align:center;padding:15px 5px}
-#result h3{font-size:30px;color:var(--rose)}
-#result p{font:15px/1.8 Arial,sans-serif}
-.note{max-width:760px;margin:30px auto;padding:38px 30px;background:linear-gradient(145deg,#fff,#fff6f8);border:1px solid #f0dce4;border-radius:20px;font-size:18px;line-height:2;box-shadow:0 12px 35px #70485a10}
-.signature{color:var(--rose);font-style:italic}
-footer{text-align:center;padding:30px 15px 45px;background:#f8e8ed;color:#987786;font:12px Arial,sans-serif;line-height:2}
-@media(max-width:700px){nav{gap:13px;flex-wrap:wrap}nav a{font-size:10px}.gallery{grid-template-columns:repeat(2,1fr);gap:12px}.photo{padding:6px 6px 18px}.wish-grid{grid-template-columns:1fr}.story,.note{font-size:16px;padding:25px 20px}.quiz-wrap{padding:23px 18px}}
+:root {
+  --pink: #bd6486;
+  --light: #f8e1e9;
+  --cream: #fff9f4;
+  --text: #684554;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: Georgia, serif;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff0f5ee;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 17px 10px;
+  box-shadow: 0 3px 15px #d9aabb33;
+}
+
+nav a {
+  color: #a34e70;
+  text-decoration: none;
+  font: 11px Arial;
+  letter-spacing: 1px;
+}
+
+.hero {
+  min-height: 95vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background:
+    radial-gradient(circle at 15% 20%,#fff 0 5%,transparent 28%),
+    radial-gradient(circle at 85% 75%,#f8e5d6 0 5%,transparent 25%),
+    linear-gradient(140deg,#f8dce8,#fff8ee);
+}
+
+.kicker {
+  font: 11px Arial;
+  letter-spacing: 4px;
+  color: #a56b7e;
+}
+
+h1 {
+  font-size: clamp(40px,9vw,80px);
+  line-height: 1.15;
+  color: var(--pink);
+  margin: 25px 0;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: auto;
+  font: 14px/2 Arial;
+  color: #765b67;
+}
+
+button {
+  border: 0;
+  border-radius: 30px;
+  padding: 14px 24px;
+  background: var(--pink);
+  color: white;
+  font: 14px Arial;
+  cursor: pointer;
+  transition: .3s;
+  margin: 20px 5px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+}
+
+.divider {
+  color: #c68ba0;
+  font-size: 25px;
+  letter-spacing: 8px;
+  margin: 25px;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(30px,5vw,43px);
+  color: var(--pink);
+  margin: 15px 0;
+}
+
+.lead {
+  font: 14px/1.9 Arial;
+  color: #927582;
+  max-width: 600px;
+  margin: auto;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.photo {
+  background: white;
+  padding: 9px 9px 22px;
+  box-shadow: 0 9px 26px #70485a18;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.photo:hover {
+  transform: translateY(-7px) rotate(1deg);
+}
+
+.photo img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  background: #f3e6eb;
+  display: block;
+}
+
+.photo span {
+  display: block;
+  padding-top: 13px;
+  font: 12px Arial;
+  color: #997583;
+}
+
+.wish-grid {
+  max-width: 900px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+}
+
+.wish {
+  background: white;
+  padding: 27px 18px;
+  border: 1px solid #f1dfe5;
+  border-radius: 18px;
+  line-height: 1.8;
+}
+
+.wish b {
+  display: block;
+  color: var(--pink);
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.note {
+  max-width: 750px;
+  margin: 35px auto;
+  padding: 38px 30px;
+  background: linear-gradient(145deg,#fff,#fff6f8);
+  border: 1px solid #f0dce4;
+  border-radius: 22px;
+  font-size: 17px;
+  line-height: 2;
+  box-shadow: 0 12px 35px #70485a10;
+}
+
+.signature {
+  color: var(--pink);
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8e8ed;
+  color: #987786;
+  font: 13px/2 Arial;
+}
+
+#musicStatus {
+  font: 12px Arial;
+  color: #a56b7e;
+}
+
+@media(max-width:700px) {
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+  }
+
+  .wish-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .note {
+    font-size: 15px;
+    padding: 25px 20px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <nav>
- <a href="#home">HOME</a><a href="#memories">FOTO</a><a href="#wishes">DOA</a><a href="#quiz">QUIZ</a><a href="#letter">SURAT</a>
+  <a href="#home">HOME</a>
+  <a href="#memories">FOTO</a>
+  <a href="#wishes">DOA</a>
+  <a href="#letter">SURAT</a>
 </nav>
 
 <header class="hero" id="home">
- <div>
-  <div class="kicker">A little website made with love</div>
-  <h1>Happy Birthday,<br>Dear Tante!</h1>
-  <p>Hari ini bukan hari biasa. Hari ini adalah hari untuk merayakan seseorang yang begitu berarti. Semoga setiap bagian kecil dari halaman ini bisa membuat Tante tersenyum.</p>
-  <button id="musicBtn" type="button">♫ Putar lagu</button>
-  <button class="outline" onclick="document.querySelector('#memories').scrollIntoView()">Lihat kejutan ↓</button>
-  <audio id="song" src="lagu.mp3" preload="none" loop></audio>
-  <div class="divider">♡ ✦ ♡</div>
- </div>
+  <div>
+
+    <div class="kicker">
+      A LITTLE WEBSITE MADE WITH LOVE
+    </div>
+
+    <h1>
+      Happy Birthday,<br>
+      Elok Lailia Kumala!
+    </h1>
+
+    <p>
+      Hari ini bukan hari biasa. Hari ini adalah
+      hari untuk merayakan seseorang yang begitu
+      berarti. Semoga setiap bagian kecil dari
+      halaman ini bisa membuat Tante tersenyum.
+    </p>
+
+    <button id="musicBtn">
+      ♫ Play Music
+    </button>
+
+    <button class="outline"
+      onclick="document.querySelector('#memories').scrollIntoView()">
+      Lihat Kejutan ↓
+    </button>
+
+    <audio id="song" src="lagu.mp3" preload="auto" loop></audio>
+
+    <div id="musicStatus">A special song for you ♡</div>
+
+    <div class="divider">♡ ✦ ♡ ✦ ♡</div>
+
+  </div>
 </header>
 
 <section id="memories">
- <div class="section-kicker">Captured moments</div>
- <h2>Our Little Gallery</h2>
- <p class="lead">Enam foto, enam potongan kenangan, dan banyak cerita yang selalu punya tempat sendiri.</p>
- <div class="gallery">
-  <div class="photo" style="--tilt:-2deg"><img src="foto1.jpg" alt="Foto Tante 1"><span>Sweet memory ♡</span></div>
-  <div class="photo" style="--tilt:1.5deg"><img src="foto2.jpg" alt="Foto Tante 2"><span>A lovely moment ♡</span></div>
-  <div class="photo" style="--tilt:-1deg"><img src="foto3.jpg" alt="Foto Tante 3"><span>Keep smiling ♡</span></div>
-  <div class="photo" style="--tilt:1deg"><img src="foto4.jpg" alt="Foto Tante 4"><span>Beautiful day ♡</span></div>
-  <div class="photo" style="--tilt:-1.5deg"><img src="foto5.jpg" alt="Foto Tante 5"><span>Always precious ♡</span></div>
-  <div class="photo" style="--tilt:2deg"><img src="foto6.jpg" alt="Foto Tante 6"><span>One for the memories ♡</span></div>
- </div>
-</section>
 
-<section id="wishes" style="background:#fff4f6">
- <div class="section-kicker">A few words from the heart</div>
- <h2>Wishes For You</h2>
- <p class="lead">Ada banyak hal baik yang pantas Tante dapatkan. Ini beberapa doa kecil untuk hari spesial Tante.</p>
- <div class="wish-grid">
-  <div class="wish"><b>♡ Happiness</b>Semoga hari-hari Tante selalu dipenuhi kebahagiaan dan alasan untuk tersenyum.</div>
-  <div class="wish"><b>✦ Good Health</b>Semoga Tante selalu sehat, kuat, dan diberi umur yang panjang serta berkah.</div>
-  <div class="wish"><b>☼ Beautiful Days</b>Semoga semua urusan dimudahkan dan harapan baik satu per satu terwujud.</div>
- </div>
-</section>
+  <div class="kicker">CAPTURED MOMENTS</div>
 
-<section id="quiz">
- <div class="section-kicker">Let's have a little fun</div>
- <h2>Birthday Mini Quiz!</h2>
- <p class="lead">Coba jawab 5 pertanyaan ringan ini. Siapa tahu Tante bisa dapat nilai sempurna!</p>
- <div class="quiz-wrap">
-  <div id="quizGame">
-   <div style="display:flex;justify-content:space-between;font:12px Arial,sans-serif;color:#9b7886"><span id="counter">Pertanyaan 1 dari 5</span><span id="score">Skor: 0</span></div>
-   <div class="progress"><span id="bar"></span></div>
-   <div id="question"></div>
-   <div class="answers" id="answers"></div>
-   <div class="quiz-actions"><span id="feedback"></span><button id="nextBtn" disabled>Selanjutnya →</button></div>
+  <h2>Our Little Gallery</h2>
+
+  <p class="lead">
+    Enam foto, enam potongan kenangan,
+    dan banyak cerita yang selalu punya
+    tempat sendiri.
+  </p>
+
+  <div class="gallery">
+
+    <div class="photo">
+      <img src="foto1.jpg" alt="Foto Tante 1">
+      <span>Sweet Memory ♡</span>
+    </div>
+
+    <div class="photo">
+      <img src="foto2.jpg" alt="Foto Tante 2">
+      <span>A Lovely Moment ♡</span>
+    </div>
+
+    <div class="photo">
+      <img src="foto3.jpg" alt="Foto Tante 3">
+      <span>Keep Smiling ♡</span>
+    </div>
+
+    <div class="photo">
+      <img src="foto4.jpg" alt="Foto Tante 4">
+      <span>Beautiful Day ♡</span>
+    </div>
+
+    <div class="photo">
+      <img src="foto5.jpg" alt="Foto Tante 5">
+      <span>Always Precious ♡</span>
+    </div>
+
+    <div class="photo">
+      <img src="foto6.jpg" alt="Foto Tante 6">
+      <span>Forever Memories ♡</span>
+    </div>
+
   </div>
-  <div id="result">
-   <div class="divider">✦ ♡ ✦</div>
-   <h3 id="resultTitle">Yeay!</h3>
-   <p id="resultText"></p>
-   <button onclick="restartQuiz()">Main lagi</button>
-  </div>
- </div>
 </section>
 
-<section id="letter" style="background:#fff4f6">
- <div class="section-kicker">A letter just for you</div>
- <h2>Dear Tante...</h2>
- <div class="note">
-  Selamat ulang tahun, Tante!<br>
-  Semoga di umur yang baru ini Tante selalu diberi kesehatan, kebahagiaan, ketenangan, dan rezeki yang berlimpah. Semoga setiap langkah Tante dipermudah, setiap doa baik dikabulkan, dan setiap hari selalu punya cerita indah untuk dikenang.
-  <br><br>
-  Terima kasih sudah menjadi bagian berharga dalam keluarga. Hari ini, semoga Tante merasa disayangi dan dirayakan, karena Tante memang pantas mendapatkan banyak hal baik.
-  <br><br>
-  <span class="signature">With love, today and always. ♡</span>
- </div>
- <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Kembali ke atas ↑</button>
+<section id="wishes" style="background:#fff0f5">
+
+  <div class="kicker">A FEW WORDS FROM THE HEART</div>
+
+  <h2>Wishes For You</h2>
+
+  <p class="lead">
+    Ada banyak hal baik yang pantas Tante dapatkan.
+    Ini beberapa doa kecil untuk hari spesial Tante.
+  </p>
+
+  <div class="wish-grid">
+
+    <div class="wish">
+      <b>♡ Happiness</b>
+      Semoga hari-hari Tante selalu dipenuhi
+      kebahagiaan dan alasan untuk tersenyum.
+    </div>
+
+    <div class="wish">
+      <b>✦ Good Health</b>
+      Semoga Tante selalu sehat, kuat,
+      dan diberi umur yang panjang serta berkah.
+    </div>
+
+    <div class="wish">
+      <b>☼ Beautiful Days</b>
+      Semoga semua urusan dimudahkan
+      dan harapan baik satu per satu terwujud.
+    </div>
+
+  </div>
+</section>
+
+<section id="letter" style="background:#fff8fa">
+
+  <div class="kicker">A LETTER JUST FOR YOU</div>
+
+  <h2>Dear Tante...</h2>
+
+  <div class="note">
+
+    Selamat ulang tahun, Tante! 💗
+
+    <br><br>
+
+    Semoga di umur yang baru ini Tante selalu
+    diberi kesehatan, kebahagiaan, ketenangan,
+    dan rezeki yang berlimpah.
+
+    <br><br>
+
+    Terima kasih sudah menjadi bagian berharga
+    dalam keluarga. Hari ini, semoga Tante
+    merasa disayangi dan dirayakan, karena
+    Tante memang pantas mendapatkan banyak hal baik.
+
+    <br><br>
+
+    <span class="signature">
+      With love, today and always. ♡
+    </span>
+
+  </div>
+
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    Kembali ke atas ↑
+  </button>
+
 </section>
 
 <footer>
- Dibuat khusus untuk Tante ♡<br>
- Semoga hari ulang tahun Tante menyenangkan!
+
+  <b>Happy birthday, Tantee! 🥳💗</b>
+
+  <br><br>
+
+  Semoga selalu sehat, panjang umur, dilancarkan
+  segala urusannya, dan makin banyak hal baik yang datang.
+  Semoga apa pun yang lagi diusahakan bisa tercapai
+  satu per satu. Jangan lupa bahagia terus ya, Tante!
+  Have the best day! 🤍
+
+  <br><br>
+
+  Made with love ♡
+
 </footer>
 
 <script>
-const audio=document.getElementById('song');
-const musicBtn=document.getElementById('musicBtn');
-musicBtn.addEventListener('click',async()=>{
- if(audio.paused){try{await audio.play();musicBtn.textContent='Ⅱ Jeda lagu';}catch(e){musicBtn.textContent='Coba putar lagi';}}
- else{audio.pause();musicBtn.textContent='♫ Putar lagu';}
+
+const audio = document.getElementById("song");
+const musicBtn = document.getElementById("musicBtn");
+const musicStatus = document.getElementById("musicStatus");
+
+musicBtn.addEventListener("click", async () => {
+
+  if (audio.paused) {
+
+    try {
+      await audio.play();
+
+      musicBtn.textContent = "Ⅱ Pause Music";
+      musicStatus.textContent = "Now Playing ♡";
+
+    } catch (error) {
+
+      musicStatus.textContent =
+        "Musik belum bisa diputar. Coba lagi ya!";
+
+    }
+
+  } else {
+
+    audio.pause();
+
+    musicBtn.textContent = "♫ Play Music";
+    musicStatus.textContent = "Music Paused ♡";
+
+  }
+
 });
 
-const questions=[
- {q:"Apa yang biasanya ada di atas kue ulang tahun?",a:["Lilin","Payung","Daun kering","Kunci"],c:0,why:"Lilin biasanya diletakkan di atas kue ulang tahun."},
- {q:"Apa yang biasa diucapkan saat seseorang berulang tahun?",a:["Selamat tidur","Selamat ulang tahun","Selamat makan siang","Sampai jumpa"],c:1,why:"Ucapan yang umum adalah selamat ulang tahun."},
- {q:"Apa yang biasanya dilakukan sebelum meniup lilin ulang tahun?",a:["Membuat harapan","Mencuci piring","Membuka jendela","Merapikan buku"],c:0,why:"Banyak orang membuat harapan sebelum meniup lilin."},
- {q:"Benda apa yang sering dipakai untuk membungkus hadiah?",a:["Kertas kado","Kertas amplas","Koran bekas saja","Kertas minyak"],c:0,why:"Kertas kado sering digunakan untuk membungkus hadiah."},
- {q:"Apa hal paling penting dari sebuah ucapan ulang tahun?",a:["Harganya mahal","Tulisannya harus panjang","Ketulusan dan doa baik","Harus memakai bahasa asing"],c:2,why:"Ucapan yang tulus dan doa baik adalah bagian terpenting."}
-];
-let current=0,points=0,chosen=null;
-const qEl=document.getElementById('question'),answersEl=document.getElementById('answers'),nextBtn=document.getElementById('nextBtn'),feedback=document.getElementById('feedback');
-function showQuestion(){
- chosen=null;nextBtn.disabled=true;feedback.textContent='';
- document.getElementById('counter').textContent=`Pertanyaan ${current+1} dari ${questions.length}`;
- document.getElementById('score').textContent=`Skor: ${points}`;
- document.getElementById('bar').style.width=`${current/questions.length*100}%`;
- qEl.textContent=questions[current].q;answersEl.innerHTML='';
- questions[current].a.forEach((answer,i)=>{
-  const b=document.createElement('button');b.className='answer';b.textContent=String.fromCharCode(65+i)+'. '+answer;
-  b.addEventListener('click',()=>selectAnswer(i,b));answersEl.appendChild(b);
- });
- nextBtn.textContent=current===questions.length-1?'Lihat hasil':'Selanjutnya →';
-}
-function selectAnswer(i,button){
- if(chosen!==null)return;chosen=i;
- [...answersEl.children].forEach(b=>b.disabled=true);
- button.classList.add('selected');
- const correct=i===questions[current].c;if(correct)points++;
- feedback.textContent=correct?'Benar! '+questions[current].why:'Belum tepat. '+questions[current].why;
- document.getElementById('score').textContent=`Skor: ${points}`;
- nextBtn.disabled=false;
-}
-nextBtn.addEventListener('click',()=>{
- if(chosen===null)return;
- if(current<questions.length-1){current++;showQuestion();}
- else{
-  document.getElementById('quizGame').style.display='none';
-  document.getElementById('result').style.display='block';
-  document.getElementById('bar').style.width='100%';
-  document.getElementById('resultTitle').textContent=points===5?'Perfect Score!':'Quiz selesai!';
-  document.getElementById('resultText').textContent=`Kamu mendapat ${points} dari 5 jawaban benar. Terima kasih sudah ikut bermain! Yang paling penting, semoga Tante selalu bahagia dan sehat. ♡`;
- }
-});
-function restartQuiz(){current=0;points=0;document.getElementById('result').style.display='none';document.getElementById('quizGame').style.display='block';showQuestion();}
-showQuestion();
+console.log("Happy Birthday, Tante Elok! ♡");
+
 </script>
+
 </body>
 </html>
