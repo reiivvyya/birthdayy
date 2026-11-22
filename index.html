@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Tante ♡</title>
+<style>
+:root{--pink:#b85f7d;--ink:#583b48;--cream:#fff8f1;--rose:#f7dce5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif}
+.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:48px 20px;background:radial-gradient(circle at 20% 20%,#fff 0 8%,transparent 30%),linear-gradient(145deg,#f9e1e8,#fff6ed 60%,#f4e4d8)}
+.kicker{font:12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#a56b7e}
+h1{font-size:clamp(42px,9vw,82px);line-height:1.05;color:var(--pink);margin:18px 0}
+.hero p{font:16px/1.8 Arial,sans-serif;max-width:520px;margin:0 auto;color:#765966}
+button{border:0;background:var(--pink);color:white;border-radius:40px;padding:14px 25px;font-size:14px;cursor:pointer;margin-top:26px}
+button:hover{filter:brightness(.95)}
+section{padding:65px 18px;text-align:center}
+h2{font-size:34px;color:var(--pink);margin:0 0 12px}
+.lead{font:14px/1.7 Arial,sans-serif;color:#92717e}
+.gallery{max-width:980px;margin:30px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.photo{background:white;padding:8px 8px 22px;border-radius:5px;box-shadow:0 9px 25px #70485a18;transform:rotate(var(--tilt))}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#f5e9ed}
+.note{max-width:690px;margin:28px auto 0;padding:32px 25px;background:white;border:1px solid #f1dce3;border-radius:18px;box-shadow:0 10px 30px #70485a12;font-size:18px;line-height:1.9}
+.signature{color:var(--pink);font-style:italic}
+footer{text-align:center;padding:15px 15px 40px;font:12px Arial,sans-serif;color:#a17f8c}
+.hearts{color:#c77c96;font-size:20px;letter-spacing:8px;margin-top:20px}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr);gap:11px}.photo{padding:6px 6px 16px}.note{font-size:16px}section{padding:48px 14px}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div>
+  <div class="kicker">A special day for someone special</div>
+  <h1>Happy Birthday,<br>Tante!</h1>
+  <p>Hari ini adalah hari untuk merayakan Tante. Semoga halaman kecil ini bisa membawa senyum dan kenangan manis.</p>
+  <button id="musicBtn" type="button">♫ Putar lagu</button>
+  <audio id="song" src="lagu.mp3" preload="none" loop></audio>
+  <div class="hearts">♡ ♡ ♡</div>
+ </div>
+</header>
+<section>
+ <h2>Beautiful Memories</h2>
+ <div class="lead">Beberapa momen yang ingin disimpan selalu.</div>
+ <div class="gallery">
+  <div class="photo" style="--tilt:-2deg"><img src="foto1.jpg" alt="Foto kenangan 1"></div>
+  <div class="photo" style="--tilt:1.5deg"><img src="foto2.jpg" alt="Foto kenangan 2"></div>
+  <div class="photo" style="--tilt:-1deg"><img src="foto3.jpg" alt="Foto kenangan 3"></div>
+  <div class="photo" style="--tilt:1deg"><img src="foto4.jpg" alt="Foto kenangan 4"></div>
+  <div class="photo" style="--tilt:-1.5deg"><img src="foto5.jpg" alt="Foto kenangan 5"></div>
+  <div class="photo" style="--tilt:2deg"><img src="foto6.jpg" alt="Foto kenangan 6"></div>
+ </div>
+</section>
+<section>
+ <h2>A Birthday Wish</h2>
+ <div class="note">
+  Selamat ulang tahun, Tante!<br>
+  Semoga selalu sehat, panjang umur, bahagia, dan dilancarkan semua urusannya.
+  Semoga setiap hari membawa hal baik, banyak alasan untuk tersenyum,
+  dan semua harapan baik Tante bisa terwujud.
+  <br><br><span class="signature">With love, always ♡</span>
+ </div>
+</section>
+<footer>Dibuat khusus untuk Tante · ♡</footer>
+<script>
+const audio=document.getElementById('song');
+const btn=document.getElementById('musicBtn');
+btn.addEventListener('click',async()=>{
+ if(audio.paused){
+  try{await audio.play();btn.textContent='Ⅱ Jeda lagu';}
+  catch(e){btn.textContent='Coba putar lagi';}
+ }else{audio.pause();btn.textContent='♫ Putar lagu';}
+});
+</script>
+</body>
+</html>
